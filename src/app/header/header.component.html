@@ -1,0 +1,11 @@
+<p>
+    <mat-toolbar color="primary">      
+      <span class="spacer"></span>
+      <div>
+        <a *ngIf="authenticationService.isUserLoggedIn()" mat-button routerLink="/itunes">Apple iTunes Search</a>
+        <a *ngIf="authenticationService.isUserLoggedIn()" mat-button routerLink="/weather">Weather Search</a>
+        <a *ngIf="!authenticationService.isUserLoggedIn()" mat-button routerLink="/login">Login</a>
+        <a *ngIf="authenticationService.isUserLoggedIn()" mat-button routerLink="/logout">Logout</a>
+      </div>
+    </mat-toolbar>
+  </p>

@@ -1,0 +1,24 @@
+.container{
+    text-align: center;
+}
+
+.form-container{
+    width: 400px; 
+    margin: 0px auto; 
+    margin-top: 0px;
+}
+
+.form-field{
+    display:inline-flex;
+}
+button{
+    margin-left:5px;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: black!important;
+    opacity: 1!important;
+}
+mat-card{
+    display: flex;
+    flex-wrap: wrap;
+}

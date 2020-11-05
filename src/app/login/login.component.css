@@ -1,0 +1,20 @@
+.container{
+    text-align: center;
+}
+
+.form-container{
+    width: 400px; 
+    margin: 0px auto; 
+    margin-top: 200px;
+}
+
+.form-field{
+    display: block;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: black!important;
+    opacity: 1!important;
+}
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick{
+    color: red!important;
+}

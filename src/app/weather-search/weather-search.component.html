@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<div>
+    <div class="form-container">
+      <form [formGroup]="searchForm" (submit)="submit()">
+        <mat-form-field  class="form-field" appearance="outline">
+            <mat-label style="color:black">Search</mat-label>
+            <input matInput formControlName="searchField" type="search">
+        </mat-form-field>
+        <mat-form-field style="color:black" appearance="outline" >
+          <mat-label style="color:black">Metric System</mat-label>
+            <mat-select  style="color:black" formControlName="typeSelect" required>
+              <mat-option value="metric">Metric</mat-option>
+              <mat-option value="imperial">Imperial</mat-option>
+            </mat-select>
+          </mat-form-field>
+        <button mat-raised-button color="secondary" type="submit" style="color:black" [disabled]="!searchForm.valid">Search</button>
+      </form>
+    </div>
+</div>
+
+<div *ngIf="this.searchResult">
+  <h1>Current temperature in {{this.searchResult.name}} is {{this.searchResult.main.temp}}</h1>
+  <p>Minimum temperature: {{this.searchResult.main.temp_min}}</p>
+  <p>Maximum temperature: {{this.searchResult.main.temp_max}}</p>
+  <p>Pressure: {{this.searchResult.main.pressure}}</p>
+  <p>Humidity: {{this.searchResult.main.humidity}}</p>
+  <p>Wind speed: {{this.searchResult.wind.speed}}</p>
+</div>
